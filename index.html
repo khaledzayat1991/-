@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>اختبار تفاعلي - الأمن الصناعي</title>
+<style>
+  body { font-family: 'Segoe UI', Tahoma, sans-serif; background-color: #f7fafc; color: #2d3748; padding: 20px; line-height: 1.6; }
+  .container { max-width: 800px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
+  h1 { color: #1a365d; text-align: center; font-size: 24px; margin-bottom: 5px; }
+  .subtitle { text-align: center; color: #718096; margin-bottom: 25px; font-size: 14px; }
+  .card { background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 18px; margin-bottom: 20px; }
+  .q-title { font-weight: bold; color: #2b6cb0; margin-bottom: 12px; font-size: 16px; }
+  .option { display: block; padding: 10px 14px; margin-bottom: 8px; background: #f8fafc; border: 1px solid #cbd5e0; border-radius: 6px; cursor: pointer; transition: 0.2s; }
+  .option:hover { background: #edf2f7; }
+  .option input { margin-left: 10px; transform: scale(1.2); }
+  .btn-submit { display: block; width: 100%; background: #2b6cb0; color: #fff; border: none; padding: 14px; font-size: 18px; font-weight: bold; border-radius: 8px; cursor: pointer; margin-top: 20px; }
+  .btn-submit:hover { background: #1a365d; }
+  #result-box { display: none; text-align: center; background: #f0fff4; border: 2px solid #38a169; border-radius: 10px; padding: 20px; margin-top: 25px; }
+  .score { font-size: 36px; font-weight: bold; color: #276749; }
+  .review-card { border-radius: 6px; padding: 12px; margin-bottom: 12px; border-right: 5px solid #ccc; text-align: right; }
+  .correct { background-color: #f0fff4; border-right-color: #38a169; }
+  .incorrect { background-color: #fff5f5; border-right-color: #e53e3e; }
+  .exp { font-size: 13px; color: #4a5568; margin-top: 5px; background: #fff; padding: 8px; border-radius: 4px; border: 1px solid #e2e8f0; }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>الاختبار التفاعلي الذاتي - الأمن الصناعي</h1>
+  <div class="subtitle">كلية الهندسة الكهربائية والإلكترونية | 20 سؤالاً (100 درجة)</div>
+
+  <form id="quizForm">
+    <!-- Q1 -->
+    <div class="card">
+      <div class="q-title">السؤال 1: يُعرّف علم الأمن الصناعي بكونه:</div>
+      <label class="option"><input type="radio" name="q1" value="A"> أ) مكافحة الجرائم وتنظيم سير المركبات.</label>
+      <label class="option"><input type="radio" name="q1" value="B"> ب) العلم الذي يدرس الحد من الحوادث وتقليل تكاليف الإصابات والأضرار.</label>
+      <label class="option"><input type="radio" name="q1" value="C"> ج) قوانين تحديد ساعات العمل والإجازات فقط.</label>
+    </div>
+
+    <!-- Q2 -->
+    <div class="card">
+      <div class="q-title">السؤال 2: الترتيب الزمني الصحيح لظهور التشريعات والمنظمات التالية هو:</div>
+      <label class="option"><input type="radio" name="q2" value="A"> أ) FLSA ← ILO ← OSHA ← ISO 45001</label>
+      <label class="option"><input type="radio" name="q2" value="B"> ب) ILO (1919) ← FLSA (1938) ← OSHA (1970) ← ISO 45001 (2018)</label>
+      <label class="option"><input type="radio" name="q2" value="C"> ج) OSHA ← ILO ← قانون العمل السوري ← OHSAS 18001</label>
+    </div>
+
+    <!-- Q3 -->
+    <div class="card">
+      <div class="q-title">السؤال 3: التيار العتبي المحسوس للتيار المتناوب (50Hz) يبلغ تقريباً:</div>
+      <label class="option"><input type="radio" name="q3" value="A"> أ) 50 - 100 µA</label>
+      <label class="option"><input type="radio" name="q3" value="B"> ب) 0.6 - 1.5 mA</label>
+      <label class="option"><input type="radio" name="q3" value="C"> ج) 10 - 15 mA</label>
+    </div>
+
+    <!-- Q4 -->
+    <div class="card">
+      <div class="q-title">السؤال 4: تيار عدم الإفلات (التيار الماسك) للتيار المتناوب (50Hz) يساوي:</div>
+      <label class="option"><input type="radio" name="q4" value="A"> أ) 0.6 - 1.5 mA</label>
+      <label class="option"><input type="radio" name="q4" value="B"> ب) 10 - 15 mA</label>
+      <label class="option"><input type="radio" name="q4" value="C"> ج) 80 - 85 mA</label>
+    </div>
+
+    <!-- Q5 -->
+    <div class="card">
+      <div class="q-title">السؤال 5: القاطع التفاضلي (RCD) يعمل بالاعتماد على:</div>
+      <label class="option"><input type="radio" name="q5" value="A"> أ) الارتفاع الحراري للحمل الزائد.</label>
+      <label class="option"><input type="radio" name="q5" value="B"> ب) قياس الفرق بين تيار الطور وتيار الحيادي (تيار التسريب) لحماية الأشخاص.</label>
+      <label class="option"><input type="radio" name="q5" value="C"> ج) مراقبة هبوط الجهد بين الأطوار.</label>
+    </div>
+
+    <button type="button" class="btn-submit" onclick="submitQuiz()">إنهاء الاختبار وتحسّب النتيجة</button>
+  </form>
+
+  <div id="result-box">
+    <h2>النتيجة النهائية</h2>
+    <div class="score" id="score">0 / 100</div>
+    <div id="review-area"></div>
+  </div>
+</div>
+
+<script>
+  const answers = { q1: "B", q2: "B", q3: "B", q4: "B", q5: "B" };
+  const exps = {
+    q1: "تعريف الأمن الصناعي يهدف للحد من الحوادث وتقليل الخسائر والإصابات.",
+    q2: "التسلسل التاريخي: ILO (1919) ثم FLSA (1938) ثم OSHA (1970) ثم ISO 45001 (2018).",
+    q3: "التيار العتبي المحسوس يقع بين 0.6 و 1.5 ميلي أمبير.",
+    q4: "تيار عدم الإفلات (الماسك) يقع بين 10 و 15 ميلي أمبير.",
+    q5: "القاطع التفاضلي يتحسس فرق تيار الخطأ والتسريب لقطع التغذية."
+  };
+
+  function submitQuiz() {
+    let score = 0;
+    let totalQ = Object.keys(answers).length;
+    let reviewHTML = "";
+
+    for (let q in answers) {
+      let selected = document.querySelector(`input[name="${q}"]:checked`);
+      let val = selected ? selected.value : "لم تُجب";
+      let isRight = val === answers[q];
+      if (isRight) score += (100 / totalQ);
+
+      reviewHTML += `
+        <div class="review-card ${isRight ? 'correct' : 'incorrect'}">
+          <strong>السؤال (${q}):</strong> ${isRight ? '✔ إجابة صحيحة' : '✖ إجابة خاطئة'}<br>
+          إجابتك: ${val} | الإجابة الصحيحة: ${answers[q]}
+          <div class="exp">💡 الشرح: ${exps[q]}</div>
+        </div>
+      `;
+    }
+
+    document.getElementById("quizForm").style.display = "none";
+    document.getElementById("result-box").style.display = "block";
+    document.getElementById("score").innerText = `${score} / 100`;
+    document.getElementById("review-area").innerHTML = reviewHTML;
+  }
+</script>
+
+</body>
+</html>
